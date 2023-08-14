@@ -418,7 +418,7 @@ Linux box.</p>
   Windows
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Use PuTTY to ssh to a Linux machine.</p>
 <p>Or use WSL (the Windows Subsistem for Linux) to install a Linux
@@ -435,7 +435,7 @@ Linux 9</a></p>
   MacOS
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Use Terminal.app and the <code>ssh</code> command to connect to a
 Linux machine.</p>
@@ -453,7 +453,7 @@ Linux 9</a>.</p>
   Linux
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Use Terminal and go to the next section</p>
 </div>
@@ -514,21 +514,26 @@ if you have root access</a>.</p>
 <h3 id="if-not">If not<a class="anchor" aria-label="anchor" href="#if-not"></a></h3>
 <p>If the above is not possible and you cannot use the CVMFS
 distribution you have still an option if user namespace is enabled on
-your system: 1. Check if user namespaces are enabled:
+your system:</p>
+<ol style="list-style-type: decimal"><li>Check if user namespaces are enabled:
 <code>bash     # on Debian/Ubuntu     grep -q 'kernel.unprivileged_userns_clone=1' /etc/sysctl.d/90-unprivileged_userns.conf &amp;&amp; \         echo "User namespaces enabled, continue the Apptainer installation" || \         echo "User namespaces NOT enabled, your use of Apptainer will be very limited"     # on RHEL/CentOS cat /proc/sys/user/max_user_namespaces` is bigger than 0     [[ $(cat /proc/sys/user/max_user_namespaces) -gt 0 ]] &amp;&amp; \         echo "User namespaces enabled, continue the Apptainer installation" || \         echo "User namespaces NOT enabled, your use of Apptainer will be very limited"</code>
 See <a href="https://apptainer.org/docs/admin/main/user_namespace.html#user-namespace-requirements" class="external-link">these
 full instructions</a> for more about checking for and enabling user
-namespaces. 1. If enabled, install unprivileged Apptainer with one of
-these three methods (in order of preference): 1. Chose your
-<code>INSTALL_DIR</code> and <a href="https://apptainer.org/docs/admin/main/installation.html#install-unprivileged-from-pre-built-binaries" class="external-link">install
+namespaces.</li>
+<li>If enabled, install unprivileged Apptainer with one of these three
+methods (in order of preference):
+<ol style="list-style-type: decimal"><li>Chose your <code>INSTALL_DIR</code> and <a href="https://apptainer.org/docs/admin/main/installation.html#install-unprivileged-from-pre-built-binaries" class="external-link">install
 there the relocatable Apptainer (recommended)</a>. Run:
-<code>bash         curl -s https://raw.githubusercontent.com/apptainer/apptainer/main/tools/install-unprivileged.sh | \             bash -s - INSTALL_DIR</code>
-1. Alternatively <a href="https://github.com/apptainer/apptainer/blob/main/INSTALL.md" class="external-link">install
-from source without root privileges</a>. 1. Or use <a href="https://github.com/cvmfs/cvmfsexec" class="external-link">cvmfsexec</a> to get CVMFS.
-This is a bit more complex, you can follow the instrictions summarized
-also in <a href="https://indico.cern.ch/event/885212/contributions/4120683/attachments/2181040/3684201/CernVMWorkshopCvmfsExec20210201.pdf" class="external-link">this
-paper</a>.</p>
-<p>If user namespaces are not enabled, apptainers/singularity is not
+<code>bash     curl -s https://raw.githubusercontent.com/apptainer/apptainer/main/tools/install-unprivileged.sh | \         bash -s - INSTALL_DIR</code>
+</li>
+<li>Alternatively <a href="https://github.com/apptainer/apptainer/blob/main/INSTALL.md" class="external-link">install
+from source without root privileges</a>.</li>
+<li>Or use <a href="https://github.com/cvmfs/cvmfsexec" class="external-link">cvmfsexec</a> to
+get CVMFS. This is a bit more complex, you can follow the instrictions
+summarized also in <a href="https://indico.cern.ch/event/885212/contributions/4120683/attachments/2181040/3684201/CernVMWorkshopCvmfsExec20210201.pdf" class="external-link">this
+paper</a>.</li>
+</ol></li>
+</ol><p>If user namespaces are not enabled, apptainers/singularity is not
 installed, and you have no root access to the host, then your use of
 apptainer/singularity will be very limited even if you install it with
 one of the three methods above. You need to request to your system
