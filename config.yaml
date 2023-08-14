@@ -8,32 +8,32 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor training for instance)
 # incubator: The Carpentries Incubator
-carpentry: 'incubator'
+carpentry: 'hsf'
 
 # Overall title for pages.
-title: 'Lesson Title' # FIXME
+title: 'Introduction to Apptainer/Singularity'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~ # FIXME
+created: 2023-08-13
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries' # FIXME
+keywords: 'software, lesson, The Carpentries, HSF, Apptainer, Singularity'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha' # FIXME
+life_cycle: 'beta'
 
 # License of the lesson
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries/workbench-template-md' # FIXME
+source: 'https://github.com/mambelli/hsf-training-apptainer' # FIXME
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org' # FIXME
+contact: 'hsf-training-wg@googlegroups.com'
 
 # Navigation ------------------------------------------------
 #
@@ -59,10 +59,19 @@ contact: 'team@carpentries.org' # FIXME
 
 # Order of episodes in your lesson
 episodes: 
-- introduction.md
+- 01-introduction.md
+- 02-running-containers.md
+- 03-break.md
+- 04-building-containers.md
+- 05-definition-files.md
+- 06-break.md
+- 07-file-sharing.md
+- 08-instances.md
+- 09-bonus-episode.md
 
 # Information for Learners
 learners: 
+- setup.md
 
 # Information for Instructors
 instructors: 
