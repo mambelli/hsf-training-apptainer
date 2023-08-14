@@ -95,6 +95,7 @@ It is easiest to
 If the above is not possible and you cannot use the CVMFS distribution you have still an option if user namespace is enabled on your system:
 
 1.  Check if user namespaces are enabled:
+
     ```bash
     # on Debian/Ubuntu
     grep -q 'kernel.unprivileged_userns_clone=1' /etc/sysctl.d/90-unprivileged_userns.conf && \
@@ -105,13 +106,17 @@ If the above is not possible and you cannot use the CVMFS distribution you have 
         echo "User namespaces enabled, continue the Apptainer installation" || \
         echo "User namespaces NOT enabled, your use of Apptainer will be very limited"
     ```
+
    See [these full instructions](https://apptainer.org/docs/admin/main/user_namespace.html#user-namespace-requirements) for more about checking for and enabling user namespaces.
+
 1.  If enabled, install unprivileged Apptainer with one of these three methods (in order of preference):
     1.  Chose your `INSTALL_DIR` and [install there the relocatable Apptainer (recommended)](https://apptainer.org/docs/admin/main/installation.html#install-unprivileged-from-pre-built-binaries). Run:
+
         ```bash
         curl -s https://raw.githubusercontent.com/apptainer/apptainer/main/tools/install-unprivileged.sh | \
             bash -s - INSTALL_DIR
         ```
+
     1.  Alternatively [install from source without root privileges](https://github.com/apptainer/apptainer/blob/main/INSTALL.md).
     1.  Or use [cvmfsexec](https://github.com/cvmfs/cvmfsexec) to get CVMFS. This is a bit more complex, you can follow the instrictions summarized also in
         [this paper](https://indico.cern.ch/event/885212/contributions/4120683/attachments/2181040/3684201/CernVMWorkshopCvmfsExec20210201.pdf).

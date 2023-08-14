@@ -14,5 +14,5 @@
 "episodes/08-instances.md" "7005121f0d7ed408ec5433b84e1f5bfa" "site/built/08-instances.md" "2023-08-14"
 "episodes/09-bonus-episode.md" "3bb077465e5acea4129f379f0ca60ba9" "site/built/09-bonus-episode.md" "2023-08-14"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2023-03-16"
-"learners/setup.md" "f0d5acb29ff6321f68373420ca19c071" "site/built/setup.md" "2023-08-14"
+"learners/setup.md" "56dd5ca55e12ac6d65f8dc9065692900" "site/built/setup.md" "2023-08-14"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2022-04-22"
