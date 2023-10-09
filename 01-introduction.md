@@ -29,6 +29,7 @@ as far as the platform compatible with the container is available.
 
 Concepts such as reproducibility, preservation, and distribution
 are important in the HEP community, and the containers provide a solution totally compatible with such concepts:
+
 - The version of some specific software used to perform an analysis can be preserved in a container with exactly the same
 environment used at that time.
 - A "legacy software" with binaries only available for an outdated OS can be executed inside a container.
