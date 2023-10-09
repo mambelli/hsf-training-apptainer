@@ -29,10 +29,10 @@ as far as the platform compatible with the container is available.
 
 Concepts such as reproducibility, preservation, and distribution
 are important in the HEP community, and the containers provide a solution totally compatible with such concepts:
-* The version of some specific software used to perform an analysis can be preserved in a container with exactly the same
+- The version of some specific software used to perform an analysis can be preserved in a container with exactly the same
 environment used at that time.
-* A "legacy software" with binaries only available for an outdated OS can be executed inside a container.
-* All the necessary packages to process data can be easily distributed in containers, independently of the operating
+- A "legacy software" with binaries only available for an outdated OS can be executed inside a container.
+- All the necessary packages to process data can be easily distributed in containers, independently of the operating
 system available on the sites.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
@@ -56,10 +56,10 @@ in which usually complex applications run exhaustively using all the available r
 
 Apptainer/Singularity is a container platform created for the HPC/HTC use case. It allows to build and run containers with just
 a few steps in most of the cases, and its design presents key concepts for the scientific community:
-* Single-file based container images, facilitating the distribution, archiving and sharing.
-* Ability to run, and in modern systems also to be installed, without any root daemon or setuid privileges. This makes it safer for large computer centers with shared resources.
-* Preserves the permissions in the environment. The user outside the container can be the same user inside.
-* Simple integration with resource managers and distributed computing frameworks because it runs as a regular application.
+- Single-file based container images, facilitating the distribution, archiving and sharing.
+- Ability to run, and in modern systems also to be installed, without any root daemon or setuid privileges. This makes it safer for large computer centers with shared resources.
+- Preserves the permissions in the environment. The user outside the container can be the same user inside.
+- Simple integration with resource managers and distributed computing frameworks because it runs as a regular application.
 
  <a href="https://apptainer.org/docs/user/">
 <img src="https://apptainer.org/docs/user/main/_static/logo.png" alt="Apptainer/Singularity" width="220">
@@ -78,9 +78,10 @@ If you want to learn more about docker, check out [our docker training](https://
 In these lessons you see the name *Apptainer* or *Apptainer/Singularity*, and the command `apptainer`.
 As stated in the [move and renaming announcement](https://apptainer.org/news/community-announcement-20211130/), "Singularity IS Apptainer".
 Currently there are three products derived from the original Singularity project from 2015:
-* *Singularity*: commercial software by [Sylabs](https://sylabs.io/).
-* [*SingularityCE*](https://sylabs.io/2022/06/singularityce-is-singularity/): open source Singularity supported by Sylabs.
-* *Apptainer*: open source Singularity, recently renamed and hosted by the [Linux Foundation](https://www.linuxfoundation.org/).
+- *Singularity*: commercial software by [Sylabs](https://sylabs.io/).
+- [*SingularityCE*](https://sylabs.io/2022/06/singularityce-is-singularity/): open source Singularity supported by Sylabs.
+- *Apptainer*: open source Singularity, recently renamed and hosted by the [Linux Foundation](https://www.linuxfoundation.org/).
+
 As of Fall 2022 all three Apptainer/Singularity versions are compatible and practically the same, but have different roadmaps.
 There is hope that in the future they will join forces, but this is not currently the case.
 To understand how this came to be you can read the [Singularity history on Wikipedia](https://en.wikipedia.org/wiki/Singularity_%28software%29#History).
