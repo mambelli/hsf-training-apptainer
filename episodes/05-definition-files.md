@@ -119,6 +119,7 @@ From: ubuntu:20.04
 ```
 
 Let's take a look at the [definition file](https://apptainer.org/docs/user/main/definition_files.html):
+
 * The first two lines define the base image. In this case, the image `ubuntu:20.04` from Docker Hub is used.
 * `%post` are lines to execute inside the container after the OS has been set. In this example, we are listing the
 steps that we would follow to install ROOT with a precompiled binary in an interactive session.
@@ -169,6 +170,7 @@ Check the [Apptainer docs](https://apptainer.org/docs/user/main/build_a_containe
 options and more details related to the container creation.
 
 A few [best practices for your containers](https://apptainer.org/docs/user/1.0/definition_files.html#best-practices-for-build-recipes) to make them more usable, portable, and secure:
+
 1. Always install packages, programs, data, and files into operating system locations (e.g. not `/home`, `/tmp` , or any other directories that might get commonly binded on).
 1. Document your container. If your runscript doesn’t supply help, write a `%help` or `%apphelp` section. A good container tells the user how to interact with it.
 1. If you require any special environment variables to be defined, add them to the `%environment` and `%appenv` sections of the build recipe.

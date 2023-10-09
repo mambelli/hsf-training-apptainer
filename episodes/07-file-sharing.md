@@ -37,9 +37,11 @@ And the same happens with permissions and ownership for files in bind directorie
 
 For each container executed, Apptainer binds automatically some directories by default, and other defined
 by the system admin in the Apptainer configuration. By default, Apptainer binds:
+
 * The user's home directory ($HOME)
 * The current directory when the container is executed ($PWD)
 * System-defined paths: `/tmp`, `/proc`, `/dev`, etc.
+
 Since this is defined in the configuration, it may vary from site to site.
 
 Let's use for example the container built during the last chapter called `rootInUbuntu.sif`. Take a look at your

@@ -20,8 +20,10 @@ exercises: 0
 ::::::::::::::::::::::::::::::::::::::::::  prereq
 ## Prerequisites
 For this lesson, you will need,
+
 * Knowledge of Git [SW Carpentry Git-Novice Lesson](https://swcarpentry.github.io/git-novice/)
 * Knowledge of GitHub CI/CD [HSF Github CI/CD Lesson](https://hsf-training.github.io/hsf-training-cicd-github/)
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 <iframe width="427" height="251" src="https://www.youtube.com/embed/BRRaSsrK7-k" title="Intro to Apptainer/Singularity #7 - Bonus episode" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
