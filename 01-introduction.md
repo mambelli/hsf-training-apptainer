@@ -56,6 +56,7 @@ in which usually complex applications run exhaustively using all the available r
 
 Apptainer/Singularity is a container platform created for the HPC/HTC use case. It allows to build and run containers with just
 a few steps in most of the cases, and its design presents key concepts for the scientific community:
+
 - Single-file based container images, facilitating the distribution, archiving and sharing.
 - Ability to run, and in modern systems also to be installed, without any root daemon or setuid privileges. This makes it safer for large computer centers with shared resources.
 - Preserves the permissions in the environment. The user outside the container can be the same user inside.
@@ -78,9 +79,10 @@ If you want to learn more about docker, check out [our docker training](https://
 In these lessons you see the name *Apptainer* or *Apptainer/Singularity*, and the command `apptainer`.
 As stated in the [move and renaming announcement](https://apptainer.org/news/community-announcement-20211130/), "Singularity IS Apptainer".
 Currently there are three products derived from the original Singularity project from 2015:
-- *Singularity*: commercial software by [Sylabs](https://sylabs.io/).
-- [*SingularityCE*](https://sylabs.io/2022/06/singularityce-is-singularity/): open source Singularity supported by Sylabs.
-- *Apptainer*: open source Singularity, recently renamed and hosted by the [Linux Foundation](https://www.linuxfoundation.org/).
+
+* *Singularity*: commercial software by [Sylabs](https://sylabs.io/).
+* [*SingularityCE*](https://sylabs.io/2022/06/singularityce-is-singularity/): open source Singularity supported by Sylabs.
+* *Apptainer*: open source Singularity, recently renamed and hosted by the [Linux Foundation](https://www.linuxfoundation.org/).
 
 As of Fall 2022 all three Apptainer/Singularity versions are compatible and practically the same, but have different roadmaps.
 There is hope that in the future they will join forces, but this is not currently the case.
