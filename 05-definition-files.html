@@ -294,7 +294,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Containers from definition files</h1>
-        <p> Last updated on 2023-08-14 | 
+        <p> Last updated on 2023-10-09 | 
         
         <a href="https://github.com/mambelli/hsf-training-apptainer/edit/main/episodes/05-definition-files.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -449,23 +449,31 @@ From: ubuntu:20.04
     Example container running the RooFit tutorial and producing the rf101_basics.png image.
     The container provides ROOT with RooFit and Python integration running on Ubuntu.</code></pre>
 <p>Let’s take a look at the <a href="https://apptainer.org/docs/user/main/definition_files.html" class="external-link">definition
-file</a>: * The first two lines define the base image. In this case, the
-image <code>ubuntu:20.04</code> from Docker Hub is used. *
-<code>%post</code> are lines to execute inside the container after the
-OS has been set. In this example, we are listing the steps that we would
-follow to install ROOT with a precompiled binary in an interactive
+file</a>:</p>
+<ul><li>The first two lines define the base image. In this case, the image
+<code>ubuntu:20.04</code> from Docker Hub is used.</li>
+<li>
+<code>%post</code> are lines to execute inside the container after
+the OS has been set. In this example, we are listing the steps that we
+would follow to install ROOT with a precompiled binary in an interactive
 session. Notice that the binary used corresponds with the Ubuntu version
-defined at the second line. * <code>%environment</code> is used to
-define environment variables available inside the container. Here we are
-setting the env variables required to execute ROOT and PyROOT. *
-Apptainer containers can be executable. <code>%runscript</code> define
-the actions to take when the container is executed. To illustrate the
-functionality, we will just run <a href="https://root.cern/doc/master/rf101__basics_8py.html" class="external-link">rf101_basics.py</a>
-from the RooFit tutorial. * <code>%labels</code> add custom metadata to
-the container. * <code>%help</code> it is the container documentation:
-what it is and how to use it. Can be displayed using
-<code>apptainer run-help</code></p>
-<p>Save this definition file as <code>rootInUbuntu.def</code>. To build
+defined at the second line.</li>
+<li>
+<code>%environment</code> is used to define environment variables
+available inside the container. Here we are setting the env variables
+required to execute ROOT and PyROOT.</li>
+<li>Apptainer containers can be executable. <code>%runscript</code>
+define the actions to take when the container is executed. To illustrate
+the functionality, we will just run <a href="https://root.cern/doc/master/rf101__basics_8py.html" class="external-link">rf101_basics.py</a>
+from the RooFit tutorial.</li>
+<li>
+<code>%labels</code> add custom metadata to the container.</li>
+<li>
+<code>%help</code> it is the container documentation: what it is and
+how to use it. Can be displayed using
+<code>apptainer run-help</code>
+</li>
+</ul><p>Save this definition file as <code>rootInUbuntu.def</code>. To build
 the container, just provide the definition file as argument (executing
 as superuser):</p>
 <div class="codewrapper sourceCode" id="cb6">
@@ -509,21 +517,26 @@ docs</a> to see all the available options and more details related to
 the container creation.</p>
 <p>A few <a href="https://apptainer.org/docs/user/1.0/definition_files.html#best-practices-for-build-recipes" class="external-link">best
 practices for your containers</a> to make them more usable, portable,
-and secure: 1. Always install packages, programs, data, and files into
-operating system locations (e.g. not <code>/home</code>,
-<code>/tmp</code> , or any other directories that might get commonly
-binded on). 1. Document your container. If your runscript doesn’t supply
-help, write a <code>%help</code> or <code>%apphelp</code> section. A
-good container tells the user how to interact with it. 1. If you require
-any special environment variables to be defined, add them to the
-<code>%environment</code> and <code>%appenv</code> sections of the build
-recipe. 1. Files should always be owned by a system account (UID less
-than 500). 1. Ensure that sensitive files like <code>/etc/passwd</code>,
+and secure:</p>
+<ol style="list-style-type: decimal"><li>Always install packages, programs, data, and files into operating
+system locations (e.g. not <code>/home</code>, <code>/tmp</code> , or
+any other directories that might get commonly binded on).</li>
+<li>Document your container. If your runscript doesn’t supply help,
+write a <code>%help</code> or <code>%apphelp</code> section. A good
+container tells the user how to interact with it.</li>
+<li>If you require any special environment variables to be defined, add
+them to the <code>%environment</code> and <code>%appenv</code> sections
+of the build recipe.</li>
+<li>Files should always be owned by a system account (UID less than
+500).</li>
+<li>Ensure that sensitive files like <code>/etc/passwd</code>,
 <code>/etc/group</code>, and <code>/etc/shadow</code> do not contain
-secrets. 1. Build production containers from a definition file instead
-of a sandbox that has been manually changed. This ensures the greatest
-possibility of reproducibility and mitigates the “black box” effect.</p>
-<div id="deploying-your-containers" class="callout callout">
+secrets.</li>
+<li>Build production containers from a definition file instead of a
+sandbox that has been manually changed. This ensures the greatest
+possibility of reproducibility and mitigates the “black box”
+effect.</li>
+</ol><div id="deploying-your-containers" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -694,7 +707,7 @@ any links that you are not going to use.
   "url": "https://mambelli.github.io/hsf-training-apptainer/05-definition-files.html",
   "identifier": "https://mambelli.github.io/hsf-training-apptainer/05-definition-files.html",
   "dateCreated": "2023-08-13",
-  "dateModified": "2023-08-14",
+  "dateModified": "2023-10-09",
   "datePublished": "2023-10-09"
 }
 
