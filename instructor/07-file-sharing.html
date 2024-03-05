@@ -364,7 +364,7 @@ directory</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -376,9 +376,9 @@ again</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> shell rootInUbuntu.sif</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> pwd</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">apptainer</span> shell rootInUbuntu.sif</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> pwd</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -388,13 +388,12 @@ again</p>
 <p>you will notice that the files stored on the host are located inside
 the container! As we explained above, Apptainer mounts automatically
 your <code>$HOME</code> inside the container.</p>
-<div id="disabling-system-binds" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="disabling-system-binds" class="callout-inner">
-<h3 class="callout-title">Disabling system binds<a class="anchor" aria-label="anchor" href="#disabling-system-binds"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="disabling-system-binds">Disabling system binds<a class="anchor" aria-label="anchor" href="#disabling-system-binds"></a></h3>
 <div class="callout-content">
 <p>If for any reason you want to execute a container removing the
 default binds, the command-line option <code>--no-mount</code> is
@@ -402,7 +401,7 @@ available. For example, to disable the bind of <code>/tmp</code></p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">run</span> <span class="at">--no-mount</span> tmp my_container.sif</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">run</span> <span class="at">--no-mount</span> tmp my_container.sif</span></code></pre>
 </div>
 </div>
 </div>
@@ -411,14 +410,14 @@ available. For example, to disable the bind of <code>/tmp</code></p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> shell <span class="at">--no-mount</span> home rootInUbuntu.sif</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">apptainer</span> shell <span class="at">--no-mount</span> home rootInUbuntu.sif</span></code></pre>
 </div>
 <p>and you will notice that <code>$HOME</code> is not mounted
 anymore</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> /home/myuser</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">ls</span> /home/myuser</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -447,8 +446,8 @@ analysis</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="va">$HOME</span>/mydata</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"MUONMASS=105.66 MeV"</span> <span class="op">&gt;</span> <span class="va">$HOME</span>/mydata/muonMass.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">mkdir</span> <span class="va">$HOME</span>/mydata</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"MUONMASS=105.66 MeV"</span> <span class="op">&gt;</span> <span class="va">$HOME</span>/mydata/muonMass.txt</span></code></pre>
 </div>
 <p>It is very, very important in your analysis workflow to know the mass
 of the muon, right? It may have sense to put the data in a high-level
@@ -456,14 +455,14 @@ directory within the container, like <code>/data</code></p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> shell <span class="at">--bind</span> <span class="va">$HOME</span>/mydata:/data rootInUbuntu.sif</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">apptainer</span> shell <span class="at">--bind</span> <span class="va">$HOME</span>/mydata:/data rootInUbuntu.sif</span></code></pre>
 </div>
 <p>This will bind the directory <code>mydata/</code> from the host as
 <code>/data</code> inside the container:</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> /data</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> /data</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -480,17 +479,17 @@ the source. For example</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> shell <span class="at">--bind</span> /cvmfs rootInUbuntu.sif</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">apptainer</span> shell <span class="at">--bind</span> /cvmfs rootInUbuntu.sif</span></code></pre>
 </div>
 <p>Will mount <code>/cvmfs</code> inside the container. Try it!</p>
-<div id="binding-directories-with-docker-like-syntax-using---mount" class="callout callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="binding-directories-with-docker-like-syntax-using---mount" class="callout-inner">
-<h3 class="callout-title">Binding directories with Docker-like syntax
-using<code>--mount</code><a class="anchor" aria-label="anchor" href="#binding-directories-with-docker-like-syntax-using---mount"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="binding-directories-with-docker-like-syntax-using---mount">Binding directories with Docker-like syntax
+using <code>--mount</code>
+<a class="anchor" aria-label="anchor" href="#binding-directories-with-docker-like-syntax-using---mount"></a></h3>
 <div class="callout-content">
 <p>The flag –mount provides a method to bind directories using the
 syntax of Docker. The bind is specified with the format
@@ -510,7 +509,7 @@ the same way as using <code>--bind</code>). For example:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">SINGULARITY_BIND</span><span class="op">=</span><span class="st">"/cvmfs"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="bu">export</span> <span class="va">SINGULARITY_BIND</span><span class="op">=</span><span class="st">"/cvmfs"</span></span></code></pre>
 </div>
 <p>will bind CVMFS to all your Apptainer containers (<code>/cvmfs</code>
 must be available in the host, of course).</p>
@@ -599,7 +598,7 @@ any links that you are not going to use.
   "identifier": "https://mambelli.github.io/hsf-training-apptainer/instructor/07-file-sharing.html",
   "dateCreated": "2023-08-13",
   "dateModified": "2023-10-09",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

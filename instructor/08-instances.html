@@ -357,13 +357,13 @@ previous chapters</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> pull docker://centos:centos7</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">apptainer</span> pull docker://centos:centos7</span></code></pre>
 </div>
 <p>The image must be started in the following way:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> instance start centos_centos7.sif mycentos7</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">apptainer</span> instance start centos_centos7.sif mycentos7</span></code></pre>
 </div>
 <p>In this example, the <code>.sif</code> is the image downloaded from
 Dockerhub, and <code>mycentos7</code> is the name that we have assigned
@@ -374,7 +374,7 @@ command, the container is running in the background.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> instance list</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">apptainer</span> instance list</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -389,24 +389,23 @@ CentOS instance:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> shell instance://mycentos7</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">apptainer</span> shell instance://mycentos7</span></code></pre>
 </div>
 <p>Remember that exiting the shell instance will not stop the container.
 For doing so, use <code>instance stop</code>:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> instance stop mycentos7</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">apptainer</span> instance stop mycentos7</span></code></pre>
 </div>
 <p>You can confirm the instance doesn’t exist with
 <code>instance list</code>.</p>
-<div id="instances-with-bind-paths" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="instances-with-bind-paths" class="callout-inner">
-<h3 class="callout-title">Instances with bind paths<a class="anchor" aria-label="anchor" href="#instances-with-bind-paths"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="instances-with-bind-paths">Instances with bind paths<a class="anchor" aria-label="anchor" href="#instances-with-bind-paths"></a></h3>
 <div class="callout-content">
 <p>When starting an instance, the same options for bind directories
 between the host and the container as running an interactive session are
@@ -415,7 +414,7 @@ instance, use the <code>--bind</code> option:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> instance start <span class="at">--bind</span> /home/user/mydata:/data centos_centos7.sif mycentos7</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">apptainer</span> instance start <span class="at">--bind</span> /home/user/mydata:/data centos_centos7.sif mycentos7</span></code></pre>
 </div>
 <p>binding the directory <code>mydata/</code> from the host as
 <code>/data</code> inside the instance.</p>
@@ -432,16 +431,16 @@ with a message.</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">HTML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode html" tabindex="0"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;title&gt;</span>My awesome service<span class="kw">&lt;/title&gt;</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1&gt;</span>Hello world!<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span>If you see this page, my awesome service is up and running.<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre>
+<pre class="sourceCode html" tabindex="0"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>My awesome service<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Hello world!<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>If you see this page, my awesome service is up and running.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre>
 </div>
 <p>If you are not familiar with HTML take a quick look at the <a href="https://www.w3schools.com/html/" class="external-link">HTML Tutorial</a>, but it is not
 mandatory. What really matters is having a minimal webpage that our
@@ -476,14 +475,14 @@ images requires either superuser permissions or using the flag
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> build <span class="at">--fakeroot</span> basicServer.sif basicServer.def</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">apptainer</span> build <span class="at">--fakeroot</span> basicServer.sif basicServer.def</span></code></pre>
 </div>
 <p>Now, let’s start an instance named <code>myWebService</code> with the
 image that we just built</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> instance start <span class="at">--no-mount</span> tmp basicServer.sif myWebService</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">apptainer</span> instance start <span class="at">--no-mount</span> tmp basicServer.sif myWebService</span></code></pre>
 </div>
 <p>Reminder from the previous chapter: with <code>--no-mount tmp</code>
 we are asking Apptainer to NOT bind <code>/tmp</code> from the host to
@@ -495,7 +494,7 @@ copied.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> http://localhost:8850</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">curl</span> http://localhost:8850</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -512,13 +511,12 @@ copied.</p>
 &lt;/html&gt;</code></pre>
 </div>
 <p>If you are executing Apptainer locally, try to open <a href="http://localhost:8850" class="external-link uri">http://localhost:8850</a>.</p>
-<div id="ssh-tunneling" class="callout callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="ssh-tunneling" class="callout-inner">
-<h3 class="callout-title">SSH tunneling<a class="anchor" aria-label="anchor" href="#ssh-tunneling"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="ssh-tunneling">SSH tunneling<a class="anchor" aria-label="anchor" href="#ssh-tunneling"></a></h3>
 <div class="callout-content">
 <p>If you are deploying a service in a cluster of your institution (as
 LXPLUS at CERN) it is likely that you need SSH tunneling for opening
@@ -527,7 +525,7 @@ can be configured as:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-L</span> <span class="op">&lt;</span>port<span class="op">&gt;</span>:localhost:<span class="op">&lt;</span>port<span class="op">&gt;</span> myuser@<span class="op">&lt;</span>server<span class="op">&gt;</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-L</span> <span class="op">&lt;</span>port<span class="op">&gt;</span>:localhost:<span class="op">&lt;</span>port<span class="op">&gt;</span> myuser@<span class="op">&lt;</span>server<span class="op">&gt;</span></span></code></pre>
 </div>
 <p>where <port> is the one used by your service, and <server> is the
 address of your institutional resources. For example, for connecting to
@@ -535,7 +533,7 @@ LXPLUS forwarding the port 8850:</server></port></p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-L</span> 8850:localhost:8850 myuser@lxplus.cern.ch</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-L</span> 8850:localhost:8850 myuser@lxplus.cern.ch</span></code></pre>
 </div>
 <p>Then you can open <a href="http://localhost:8850" class="external-link uri">http://localhost:8850</a> in your machine!</p>
 <p>Port numbers less than 1024 are privileged ports and can be used only
@@ -582,20 +580,20 @@ let’s build an image called <code>jupyterWithROOT.sif</code></p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> build <span class="at">--fakeroot</span> jupyterWithROOT.sif jupyterWithROOT.def</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">apptainer</span> build <span class="at">--fakeroot</span> jupyterWithROOT.sif jupyterWithROOT.def</span></code></pre>
 </div>
 <p>Now, start an instance named <code>mynotebook</code> with our
 brand-new image</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> instance start jupyterWithROOT.sif mynotebook</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">apptainer</span> instance start jupyterWithROOT.sif mynotebook</span></code></pre>
 </div>
 <p>and confirm that the instance is up</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> instance list</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">apptainer</span> instance list</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -612,7 +610,7 @@ To execute the command inside the instance, use
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> exec instance://notebook jupyter notebook list</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">apptainer</span> exec instance://notebook jupyter notebook list</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -626,14 +624,14 @@ that ROOT is available:</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ROOT</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Now you can work with PyROOT, creating a histogram for example</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> ROOT.TH1F(<span class="st">"myHistogram"</span>, <span class="st">"myTitle"</span>, <span class="dv">50</span>, <span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>)</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>h.FillRandom(<span class="st">"gaus"</span>, <span class="dv">10000</span>)</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> ROOT.TCanvas(<span class="st">"myCanvasName"</span>,<span class="st">"The Canvas Title"</span>,<span class="dv">800</span>,<span class="dv">600</span>)</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>h.Draw()</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>c.Draw()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="im">import</span> ROOT</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="co"># Now you can work with PyROOT, creating a histogram for example</span></span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a>h <span class="op">=</span> ROOT.TH1F(<span class="st">"myHistogram"</span>, <span class="st">"myTitle"</span>, <span class="dv">50</span>, <span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a>h.FillRandom(<span class="st">"gaus"</span>, <span class="dv">10000</span>)</span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1"></a>c <span class="op">=</span> ROOT.TCanvas(<span class="st">"myCanvasName"</span>,<span class="st">"The Canvas Title"</span>,<span class="dv">800</span>,<span class="dv">600</span>)</span>
+<span id="cb23-7"><a href="#cb23-7" tabindex="-1"></a>h.Draw()</span>
+<span id="cb23-8"><a href="#cb23-8" tabindex="-1"></a>c.Draw()</span></code></pre>
 </div>
 <p>The bottom line: with any Jupyter notebook that you write, you can
 provide an Apptainer image that will set the environment required to
@@ -660,7 +658,7 @@ available in Apptainer?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>## Solution</p>
 <pre class="source"><code>Bootstrap: docker
@@ -680,8 +678,8 @@ a cell</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> uproot</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(uproot.__doc__)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="im">import</span> uproot</span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="bu">print</span>(uproot.__doc__)</span></code></pre>
 </div>
 </div>
 </div>
@@ -766,7 +764,7 @@ any links that you are not going to use.
   "identifier": "https://mambelli.github.io/hsf-training-apptainer/instructor/08-instances.html",
   "dateCreated": "2023-08-13",
   "dateModified": "2023-08-14",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

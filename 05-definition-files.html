@@ -344,7 +344,7 @@ graphical environment)</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> hello-world.def</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">nano</span> hello-world.def</span></code></pre>
 </div>
 </li>
 <li>
@@ -353,12 +353,12 @@ graphical environment)</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">BootStrap:</span> docker</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">From:</span> ubuntu:20.04</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">%runscript</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">"Hello World"</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Print Hello world when the image is loaded</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">BootStrap:</span> docker</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="ex">From:</span> ubuntu:20.04</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="ex">%runscript</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">"Hello World"</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="co"># Print Hello world when the image is loaded</span></span></code></pre>
 </div>
 <p>In the above script, the first line - <code>BootStrap: docker</code>
 indicates that apptainer will use the docker protocol to retrieve the
@@ -375,7 +375,7 @@ hash is used to include comments within the definition file.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> build hello-world.sif hello-world.def</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">apptainer</span> build hello-world.sif hello-world.def</span></code></pre>
 </div>
 <p>The <code>hello-world.sif</code> file specifies the name of the
 output file that is built when using the <code>apptainer build</code>
@@ -386,21 +386,19 @@ command.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./hello-world.sif</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">./hello-world.sif</span></span></code></pre>
 </div>
 </li>
 </ul><div class="section level3">
 <h3 id="deleting-apptainer-image">Deleting Apptainer image<a class="anchor" aria-label="anchor" href="#deleting-apptainer-image"></a></h3>
 <p>To delete the hello-world Apptainer image, simply delete the
 <code>hello-world.sif</code> file.</p>
-<div id="apptainer-delete" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="apptainer-delete" class="callout-inner">
-<h3 class="callout-title">
-<code>apptainer delete</code><a class="anchor" aria-label="anchor" href="#apptainer-delete"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="apptainer-delete"><code>apptainer delete</code><a class="anchor" aria-label="anchor" href="#apptainer-delete"></a></h3>
 <div class="callout-content">
 <p>Note that there is also a <code>apptainer delete</code> command, but
 it is to delete an image from a remote library. To learn more about
@@ -479,7 +477,7 @@ as superuser):</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> build rootInUbuntu.sif rootInUbuntu.def</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">apptainer</span> build rootInUbuntu.sif rootInUbuntu.def</span></code></pre>
 </div>
 <p>Then, an interactive shell inside the container can be initialized
 with <code>apptainer shell</code>, or a command executed with
@@ -489,7 +487,7 @@ as an executable</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./rootInUbuntu.sif</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">./rootInUbuntu.sif</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -536,13 +534,12 @@ secrets.</li>
 sandbox that has been manually changed. This ensures the greatest
 possibility of reproducibility and mitigates the “black box”
 effect.</li>
-</ol><div id="deploying-your-containers" class="callout callout">
+</ol><div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="deploying-your-containers" class="callout-inner">
-<h3 class="callout-title">Deploying your containers<a class="anchor" aria-label="anchor" href="#deploying-your-containers"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="deploying-your-containers">Deploying your containers<a class="anchor" aria-label="anchor" href="#deploying-your-containers"></a></h3>
 <div class="callout-content">
 <p>Keep in mind that, while building a container may be time consuming,
 the execution can be immediate and anywhere your image is available.
@@ -583,7 +580,7 @@ and define the <code>%runscript</code> to execute it using
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <pre class="source"><code>BootStrap: docker
 From: centos:centos7
@@ -617,13 +614,13 @@ From: centos:centos7
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> build pythiaInCentos7.sif myPythia8.def</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">apptainer</span> build pythiaInCentos7.sif myPythia8.def</span></code></pre>
 </div>
 <p>And finally, execute the container to run <a href="https://gitlab.com/Pythia8/releases/-/blob/pythia8307/examples/main01.py" class="external-link"><code>main01.py</code></a></p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./pythiaInCentos7.sif</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">./pythiaInCentos7.sif</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -705,7 +702,7 @@ any links that you are not going to use.
   "identifier": "https://mambelli.github.io/hsf-training-apptainer/05-definition-files.html",
   "dateCreated": "2023-08-13",
   "dateModified": "2023-10-09",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

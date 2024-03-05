@@ -360,15 +360,14 @@ work directory:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> build <span class="at">--sandbox</span> myCentOS7 docker://centos:centos7</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">apptainer</span> build <span class="at">--sandbox</span> myCentOS7 docker://centos:centos7</span></code></pre>
 </div>
-<div id="notes-on-shared-file-systems-like-afs" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="notes-on-shared-file-systems-like-afs" class="callout-inner">
-<h3 class="callout-title">Notes on shared file systems like AFS<a class="anchor" aria-label="anchor" href="#notes-on-shared-file-systems-like-afs"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="notes-on-shared-file-systems-like-afs">Notes on shared file systems like AFS<a class="anchor" aria-label="anchor" href="#notes-on-shared-file-systems-like-afs"></a></h3>
 <div class="callout-content">
 <p>Avoid using the <a href="https://en.wikipedia.org/wiki/Andrew_File_System" class="external-link"><code>AFS</code>
 (Andrew File System)</a> and possibly other shared file systems as
@@ -392,8 +391,8 @@ are already root also outside.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> shell <span class="at">--writable</span> <span class="at">--fakeroot</span> myCentOS7</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> whoami</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">apptainer</span> shell <span class="at">--writable</span> <span class="at">--fakeroot</span> myCentOS7</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> whoami</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -419,8 +418,8 @@ superuser):</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> yum groupinstall <span class="st">'Development Tools'</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> yum install python3-devel</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> yum groupinstall <span class="st">'Development Tools'</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> yum install python3-devel</span></code></pre>
 </div>
 <p>Where <code>yum</code> is the <a href="https://en.wikipedia.org/wiki/Yum_(software)" class="external-link">package manager used
 in RHEL distributions</a> (like CentOS).</p>
@@ -430,10 +429,10 @@ there is a new Pythia version):</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> mkdir /opt/pythia <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> /opt/pythia</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> curl <span class="at">-o</span> pythia8307.tgz https://pythia.org/download/pythia83/pythia8307.tgz</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> tar xvfz pythia8307.tgz</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> ln <span class="at">-s</span> pythia8307 pythia8</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> mkdir /opt/pythia <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> /opt/pythia</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> curl <span class="at">-o</span> pythia8307.tgz https://pythia.org/download/pythia83/pythia8307.tgz</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> tar xvfz pythia8307.tgz</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> ln <span class="at">-s</span> pythia8307 pythia8</span></code></pre>
 </div>
 <p>To enable the Python interface, we add the flag
 <code>--with-python-include</code> during the configuration, pointing to
@@ -441,11 +440,11 @@ the location of the Python headers:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> cd pythia8307</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> ./configure <span class="at">--with-python-include</span><span class="op">=</span>/usr/include/python3.6m/</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> make</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> exit</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> cd pythia8307</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> ./configure <span class="at">--with-python-include</span><span class="op">=</span>/usr/include/python3.6m/</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> make</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> exit</span></code></pre>
 </div>
 <p>Now, open an interactive session with your user (no
 <code>--fakeroot</code>). You can use now the container with Pythia8
@@ -453,14 +452,14 @@ ready in a few steps. Let’s use the Python interface:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> shell myCentOS7</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> export PYTHONPATH=/opt/pythia/pythia8/lib:<span class="va">$PYTHONPATH</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> export LD_LIBRARY_PATH=/opt/pythia/pythia8/lib:<span class="va">$LD_LIBRARY_PATH</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> python3</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> import <span class="ex">pythia8</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> pythia <span class="ex">=</span> pythia8.Pythia<span class="er">(</span><span class="kw">)</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">apptainer</span> shell myCentOS7</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> export PYTHONPATH=/opt/pythia/pythia8/lib:<span class="va">$PYTHONPATH</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> export LD_LIBRARY_PATH=/opt/pythia/pythia8/lib:<span class="va">$LD_LIBRARY_PATH</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> python3</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> import <span class="ex">pythia8</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> pythia <span class="ex">=</span> pythia8.Pythia<span class="er">(</span><span class="kw">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -510,21 +509,21 @@ Docker image</a> and create the <code>myPython</code> sandbox:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> build <span class="at">--sandbox</span> myPython docker://python:3.9</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> shell myPython</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">apptainer</span> build <span class="at">--sandbox</span> myPython docker://python:3.9</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="ex">apptainer</span> shell myPython</span></code></pre>
 </div>
 <p>Once inside the container, you can install <a href="https://uproot.readthedocs.io/en/latest/index.html" class="external-link">Uproot</a>.</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> python3 <span class="at">-m</span> pip install <span class="at">--upgrade</span> pip</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> python3 <span class="at">-m</span> pip install uproot awkward</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> python3 <span class="at">-m</span> pip install <span class="at">--upgrade</span> pip</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> python3 <span class="at">-m</span> pip install uproot awkward</span></code></pre>
 </div>
 <p>Exit the container and use it as you like:</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> exec myPython python <span class="at">-c</span> <span class="st">"import uproot; print(uproot.__doc__)"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">apptainer</span> exec myPython python <span class="at">-c</span> <span class="st">"import uproot; print(uproot.__doc__)"</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -629,7 +628,7 @@ any links that you are not going to use.
   "identifier": "https://mambelli.github.io/hsf-training-apptainer/04-building-containers.html",
   "dateCreated": "2023-08-13",
   "dateModified": "2023-08-14",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>
