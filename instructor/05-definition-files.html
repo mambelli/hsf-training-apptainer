@@ -27,7 +27,7 @@
             <span class="visually-hidden">This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.</span>
           </abbr>
         </span>
-        
+
       </div>
     </div>
     <div class="selector-container">
@@ -56,7 +56,7 @@
             </li>
           </ul></li>
       </div>
-      
+
       <div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
@@ -179,7 +179,7 @@
                 </div><!--/div.accordion-flush-->
               </div><!--div.sidenav-view-selector -->
             </div><!--/div.col -->
-      
+
             <hr></div><!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordionFlush11">
@@ -198,7 +198,7 @@
     <div class="accordion-header" id="flush-heading1">
         <a href="index.html">Summary and Schedule</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -207,7 +207,7 @@
     <div class="accordion-header" id="flush-heading2">
         <a href="01-introduction.html">1. Introduction</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -216,7 +216,7 @@
     <div class="accordion-header" id="flush-heading3">
         <a href="02-running-containers.html">2. Containers and Images</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -225,7 +225,7 @@
     <div class="accordion-header" id="flush-heading4">
         <a href="03-break.html">3. Coffee break!</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -234,7 +234,7 @@
     <div class="accordion-header" id="flush-heading5">
         <a href="04-building-containers.html">4. Building Containers</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -248,14 +248,14 @@
         </span>
       </button>
     </div><!--/div.accordion-header-->
-        
+
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#hello-world-apptainer">Hello World Apptainer</a></li>
 <li><a href="#example-of-a-more-elaborated-definition-file">Example of a more elaborated definition file</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -264,7 +264,7 @@
     <div class="accordion-header" id="flush-heading7">
         <a href="06-break.html">6. Coffee break!</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -273,7 +273,7 @@
     <div class="accordion-header" id="flush-heading8">
         <a href="07-file-sharing.html">7. Sharing files between host and container</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -282,7 +282,7 @@
     <div class="accordion-header" id="flush-heading9">
         <a href="08-instances.html">8. Apptainer/Singularity instances</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -291,7 +291,7 @@
     <div class="accordion-header" id="flush-heading10">
         <a href="09-bonus-episode.html">9. Bonus Episode: Building and deploying an Apptainer container to Github Packages</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -322,10 +322,10 @@
               </div>
             </div>
             <hr class="half-width resources"><a href="../instructor/aio.html">See all in one page</a>
-            
+
 
             <hr class="d-none d-sm-block d-md-none"><div class="d-grid gap-1">
-            
+
             </div>
           </div><!-- /div.accordion -->
         </div><!-- /div.sidebar-inner -->
@@ -346,20 +346,20 @@
           Previous: Building Containers
         </a>
         <a class="chapter-link float-end" href="../instructor/06-break.html" rel="next">
-          Next: Coffee break!... 
+          Next: Coffee break!...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Containers from definition files</h1>
         <p>Last updated on 2023-10-09 |
-        
+
         <a href="https://github.com/mambelli/hsf-training-apptainer/edit/main/episodes/05-definition-files.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-        
-        
-        
+
+
+
         <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 70 minutes</p>
-        
+
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -394,8 +394,8 @@ file?”</li>
 interactive session may take several steps, and it can become as
 complicated as the setup is needed. An Apptainer definition file
 provides an easy way to build and deploy containers.</p>
-<section id="hello-world-apptainer"><h2 class="section-heading">Hello World Apptainer<a class="anchor" aria-label="anchor" href="#hello-world-apptainer"></a>
-</h2>
+<section><h2 class="section-heading" id="hello-world-apptainer">Hello World Apptainer<a class="anchor" aria-label="anchor" href="#hello-world-apptainer"></a>
+<a class="anchor" aria-label="anchor" href="#hello-world-apptainer"></a></h2>
 <hr class="half-width"><p>The following recipe shows how to build a hello-world container, and
 run the container on your local computer.</p>
 <ul><li>
@@ -472,8 +472,8 @@ Registries</a>.</p>
 </div>
 </div>
 </div>
-</section><section id="example-of-a-more-elaborated-definition-file"><h2 class="section-heading">Example of a more elaborated definition file<a class="anchor" aria-label="anchor" href="#example-of-a-more-elaborated-definition-file"></a>
-</h2>
+</section><section><h2 class="section-heading" id="example-of-a-more-elaborated-definition-file">Example of a more elaborated definition file<a class="anchor" aria-label="anchor" href="#example-of-a-more-elaborated-definition-file"></a>
+<a class="anchor" aria-label="anchor" href="#example-of-a-more-elaborated-definition-file"></a></h2>
 <hr class="half-width"><p>Let’s look at the structure of the definition file with another
 example. Let’s prepare a container from an <a href="https://hub.docker.com/_/ubuntu" class="external-link">official Ubuntu image</a>, but
 this time we will install ROOT with RooFit and Python integration.</p>
@@ -646,7 +646,7 @@ and define the <code>%runscript</code> to execute it using
 <div class="accordion-body">
 <pre class="source"><code>BootStrap: docker
 From: centos:centos7
- 
+
 %post
     yum -y groupinstall 'Development Tools'
     yum -y install python3-devel
@@ -660,15 +660,15 @@ From: centos:centos7
 %environment
     export PYTHONPATH=/opt/pythia/pythia8307/lib:$PYTHONPATH
     export LD_LIBRARY_PATH=/opt/pythia/pythia8307/lib:$LD_LIBRARY_PATH
- 
+
 %runscript
     cp /opt/pythia/pythia8307/Makefile.inc .
     python3 /opt/pythia/pythia8307/examples/main01.py
- 
+
 %labels
     Author HEPTraining
     Version v0.0.1
- 
+
 %help
     Container providing Pythia 8.307. Execute the container to run an example.
     Open it in a shell to use the Pythia installation with Python 3.6</code></pre>
@@ -701,9 +701,9 @@ deploy containers.”</li>
 </ul></div>
 </div>
 </div>
-<!-- 
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use. 
+any links that you are not going to use.
  -->
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
@@ -717,7 +717,7 @@ any links that you are not going to use.
           Previous: Building Containers
         </a>
         <a class="chapter-link float-end" href="../instructor/06-break.html" rel="next">
-          Next: Coffee break!... 
+          Next: Coffee break!...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -728,18 +728,18 @@ any links that you are not going to use.
       		<footer class="row footer mx-md-3"><hr><div class="col-md-6">
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
-        
+
         <a href="https://github.com/mambelli/hsf-training-apptainer/edit/main/episodes/05-definition-files.md" class="external-link">Edit on GitHub</a>
-        
+
 	
         | <a href="https://github.com/mambelli/hsf-training-apptainer/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/mambelli/hsf-training-apptainer/" class="external-link">Source</a></p>
 				<p><a href="https://github.com/mambelli/hsf-training-apptainer/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:hsf-training-wg@googlegroups.com">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
-        
+
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
-        
+
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
         <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.5" class="external-link">sandpaper (0.16.5)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.6" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.3" class="external-link">varnish (1.0.3)</a></p>
 			</div>
@@ -764,7 +764,7 @@ any links that you are not going to use.
   "identifier": "https://mambelli.github.io/hsf-training-apptainer/instructor/05-definition-files.html",
   "dateCreated": "2023-08-13",
   "dateModified": "2023-10-09",
-  "datePublished": "2024-07-02"
+  "datePublished": "2024-07-09"
 }
 
   </script><script>
